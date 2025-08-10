@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pixel Kombat</title>
+    
+    <!-- Main Stylesheet -->
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- Note: A custom font like 'mortal_font.ttf' would be loaded via @font-face in style.css -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Main Game Container -->
+    <div id="game-container">
+        <!-- Title Screen (will be controlled by ui.js) -->
+        <div id="title-screen">
+            <!-- Logo could be placed here -->
+            <!-- <img src="assets/images/logo.png" alt="Pixel Kombat Logo"> -->
+            <h1>PIXEL KOMBAT</h1>
+            <button id="start-button">Start Game</button>
+            <p class="credits">A game by Ritesh Kumar Pradhan</p>
+        </div>
+        
+        <!-- UI Overlay for Health Bars, Timer, etc. (controlled by ui.js) -->
+        <div id="ui-overlay">
+            <div class="top-bar">
+                <!-- Player 1 Health -->
+                <div class="player-health-container player1">
+                    <div class="health-bar-inner" id="player1-health"></div>
+                </div>
+                <!-- Timer -->
+                <div id="timer">60</div>
+                <!-- Player 2 Health -->
+                <div class="player-health-container player2">
+                    <div class="health-bar-inner" id="player2-health"></div>
+                </div>
+            </div>
+            <div id="result-message"></div>
+        </div>
+
+        <!-- Game Canvas where the fighting happens -->
+        <canvas id="game-canvas"></canvas>
+    </div>
+
+    <!-- 
+      Game Scripts
+      The order is important to ensure dependencies are loaded correctly.
+      Utilities -> Core Classes -> Main Game Logic
+    -->
+    <script src="scripts/collision.js"></script>
+    <script src="scripts/ui.js"></script>
+    <script src="scripts/stage.js"></script>
+    <script src="scripts/player.js"></script>
+    <script src="scripts/enemy.js"></script>
+    <script src="scripts/controls.js"></script>
+    
+    <!-- Main game file that ties everything together -->
+    <script src="game.js"></script>
+
+</body>
+</html>
