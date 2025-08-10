@@ -1,0 +1,17 @@
+{
+  "level": 1,
+  "name": "The Forgotten Temple",
+  "assets": {
+    "background": "assets/images/bg_stage1.png",
+    "music": "assets/sounds/bg_music.mp3"
+  },
+  "player_start": {
+    "x": 200,
+    "y": 100
+  },
+  "enemy_start": {
+    "x": 774,
+    "y": 100
+  },
+  "gravity": 0.7
+}
